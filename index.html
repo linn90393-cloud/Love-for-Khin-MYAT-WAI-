@@ -1,0 +1,96 @@
+
+<!DOCTYPE html>
+<html lang="my">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>For Khin Myat Wai 💗</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 25px 15px;
+      min-height: 100vh;
+      box-sizing: border-box;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: sans-serif;
+      background: linear-gradient(135deg, #ffe0ed, #fff5fa);
+      color: #853d60;
+    }
+    .card {
+      max-width: 420px;
+      width: 100%;
+      box-sizing: border-box;
+      padding: 25px 20px;
+      text-align: center;
+      background: #ffffffdd;
+      border-radius: 25px;
+      box-shadow: 0 8px 30px #d66b9833;
+    }
+    h1 { color: #df4f8a; }
+    .photo {
+      width: 100%;
+      max-height: 380px;
+      object-fit: cover;
+      border-radius: 18px;
+      border: 4px solid white;
+    }
+    .letter {
+      background: #fff0f6;
+      padding: 18px 12px;
+      border-radius: 16px;
+      line-height: 2;
+      white-space: pre-line;
+    }
+    button {
+      margin-top: 20px;
+      padding: 13px 22px;
+      border: 0;
+      border-radius: 25px;
+      background: #e85d96;
+      color: white;
+      font-size: 16px;
+    }
+  </style>
+</head>
+<body>
+  <main class="card">
+    <div style="font-size:35px">💗</div>
+    <p>ဒီစာမျက်နှာလေးက မလေးတစ်ယောက်တည်းအတွက်ပါ</p>
+    <h1>မလေး Khin Myat Wai 💕</h1>
+
+    <img class="photo" src="photo.jpg" alt="မလေးရဲ့ပုံ">
+
+    <h2>မလေးအတွက် ချစ်စာ 💌</h2>
+    <div class="letter">မက မောင့်ဘဝရဲ့ အရေးကြီးဆုံးလူလေးပါ။
+မနဲ့အတူ အမှတ်တရလှလှလေးတွေ အများကြီး ဖန်တီးသွားချင်တယ်။
+
+မောင့်ရဲ့ အချစ်တွေအားလုံးနဲ့
+Kyaw San Linn ❤️</div>
+
+    <button onclick="playMusic()">🎵 သီချင်းဖွင့်မယ်</button>
+    <audio id="song" src="song.mp3" loop></audio>
+
+    <p style="margin-top:25px">Made with love, just for you 💗</p>
+  </main>
+
+  <script>
+    function playMusic() {
+      const song = document.getElementById("song");
+      const button = document.querySelector("button");
+
+      if (song.paused) {
+        song.play().then(() => {
+          button.textContent = "⏸️ သီချင်းရပ်မယ်";
+        }).catch(() => {
+          alert("song.mp3 ဖိုင်ကို အရင်ထည့်ပေးပါနော် 💗");
+        });
+      } else {
+        song.pause();
+        button.textContent = "🎵 သီချင်းဖွင့်မယ်";
+      }
+    }
+  </script>
+</body>
+</html>
