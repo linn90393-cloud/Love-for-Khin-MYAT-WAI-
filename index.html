@@ -32,6 +32,40 @@
   <title>For Khin Myat Wai 💗</title>
   <style>
     body {
+      
+<style>
+.memory-album {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px 12px;
+  padding: 18px 8px;
+}
+
+.polaroid {
+  background: #fffdf8;
+  padding: 9px 9px 20px;
+  box-shadow: 0 5px 15px #00000020;
+  transform: rotate(-2deg);
+}
+
+.polaroid:nth-child(even) {
+  transform: rotate(2deg);
+}
+
+.polaroid img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+}
+
+.polaroid p {
+  color: #b34f79;
+  text-align: center;
+  margin: 12px 0 0;
+}
+</style>
+      
       margin: 0;
       padding: 25px 15px;
       min-height: 100vh;
